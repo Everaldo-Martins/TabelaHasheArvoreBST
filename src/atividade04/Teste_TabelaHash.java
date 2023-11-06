@@ -1,0 +1,52 @@
+package atividade04;
+
+import static org.junit.Assert.*;
+import org.junit.Before;
+import org.junit.Test;
+
+public class Teste_TabelaHash {
+	private TabelaHash tabela;
+
+    @Before
+    public void setUp() {
+        tabela = new TabelaHash(5); // Tamanho da tabela é 5
+    }
+
+    @Test
+    public void testInsert() {
+        tabela.insert(10);
+        assertEquals("0: 10\n1: \n2: \n3: \n4: \n", tabela.print());
+    }
+
+    @Test
+    public void testRemove() throws Exception {
+        tabela.insert(10);
+        tabela.insert(15);
+        tabela.remove(10);
+        assertEquals("0: 15\n1: \n2: \n3: \n4: \n", tabela.print());
+    }
+
+    @Test
+    public void testSearch() {
+        tabela.insert(10);
+        tabela.insert(15);
+        try {
+            assertEquals(10, tabela.search(10));
+        } catch (Exception e) {
+            fail("Exceção não deve ser lançada");
+        }
+    }
+
+    @Test(expected = Exception.class)
+    public void testSearchElementNotFound() throws Exception {
+        tabela.insert(10);
+        tabela.search(15); // Deve lançar uma exceção
+    }
+
+    @Test
+    public void testPrint() {        
+        tabela.insert(15);
+        tabela.insert(10);
+        assertEquals("0: 10\n1: 15\n2: \n3: \n4: \n", tabela.print());
+    }
+}
