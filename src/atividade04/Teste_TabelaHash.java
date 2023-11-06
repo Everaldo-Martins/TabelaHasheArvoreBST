@@ -45,8 +45,8 @@ public class Teste_TabelaHash {
 
     @Test
     public void testPrint() {        
+        tabela.insert(10);
         tabela.insert(15);
-        tabela.insert(16);
-        assertEquals("0: 15\n1: 16\n2: \n3: \n4: \n", tabela.print());
+        assertEquals("0: 10\n1: 15\n2: \n3: \n4: \n", tabela.print());
     }
 }
