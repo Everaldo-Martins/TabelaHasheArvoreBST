@@ -1,6 +1,5 @@
 package atividade04;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,15 +10,20 @@ public class TabelaHash implements TabelaHash_IF {
 	public TabelaHash(int size) {
 		this.size = size;
 		this.frame = new ArrayList<>(size);
+    
 		for (int i = 0; i < size; i++) {
 			frame.add(new ArrayList<>());
 		}
 	}
 
+  private int hash(int element) {
+    return element % size;
+  }
+
 	@Override
 	public void insert(int element) {
 		int index = hash(element);
-		frame.get(index).add(0, element);
+		frame.get(index).add(0,element);
 	}
 
 	@Override
@@ -52,19 +56,16 @@ public class TabelaHash implements TabelaHash_IF {
 
 		for (int i = 0; i < size; i++) {
 			result.append(i).append(": ");
-			List<Integer> list = frame.get(i);
-			for (int j = 0; j < list.size(); j++) {
-				result.append(list.get(j));
-				if (j < list.size() - 1) {
-					result.append(", ");
-				}
-			}
+			if(!frame.get(i).isEmpty()){
+        		for (int j = 0; j < frame.get(i).size(); j++) {
+          			result.append(frame.get(i).get(j));
+          			if (j < frame.get(i).size() - 1) {
+            			result.append(", ");
+         	 		}
+        		}
+      		}
 			result.append("\n");
 		}
 		return result.toString();
-	}
-	
-	private int hash(int element) {
-		return element % size;
 	}
 }
