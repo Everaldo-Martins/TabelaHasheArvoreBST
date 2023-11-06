@@ -9,7 +9,7 @@ public class Teste_TabelaHash {
 
     @Before
     public void setUp() {
-        tabela = new TabelaHash(5); // Tamanho da tabela é 5
+        tabela = new TabelaHash(5); 
     }
 
     @Test
@@ -40,7 +40,7 @@ public class Teste_TabelaHash {
     @Test(expected = Exception.class)
     public void testSearchElementNotFound() throws Exception {
         tabela.insert(10);
-        tabela.search(15); // Deve lançar uma exceção
+        tabela.search(15);
     }
 
     @Test

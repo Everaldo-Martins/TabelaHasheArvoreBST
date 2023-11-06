@@ -1,5 +1,6 @@
 package atividade04;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,6 +49,7 @@ public class TabelaHash implements TabelaHash_IF {
 	@Override
 	public String print() {
 		StringBuilder result = new StringBuilder();
+
 		for (int i = 0; i < size; i++) {
 			result.append(i).append(": ");
 			List<Integer> list = frame.get(i);
@@ -61,7 +63,7 @@ public class TabelaHash implements TabelaHash_IF {
 		}
 		return result.toString();
 	}
-
+	
 	private int hash(int element) {
 		return element % size;
 	}
