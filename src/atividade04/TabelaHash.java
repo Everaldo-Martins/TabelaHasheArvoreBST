@@ -57,13 +57,13 @@ public class TabelaHash implements TabelaHash_IF {
 		for (int i = 0; i < size; i++) {
 			result.append(i).append(": ");
 			if(!frame.get(i).isEmpty()){
-        for (int j = 0; j < frame.get(i).size(); j++) {
-          result.append(frame.get(i).get(j));
-          if (j < frame.get(i).size() - 1) {
-            result.append(", ");
-          }
-        }
-      }
+        		for (int j = 0; j < frame.get(i).size(); j++) {
+          			result.append(frame.get(i).get(j));
+          			if (j < frame.get(i).size() - 1) {
+            			result.append(", ");
+         	 		}
+        		}
+      		}
 			result.append("\n");
 		}
 		return result.toString();
