@@ -27,14 +27,10 @@ public class Teste_TabelaHash {
     }
 
     @Test
-    public void testSearch() {
+    public void testSearch() throws Exception {
         tabela.insert(10);
         tabela.insert(15);
-        try {
-            assertEquals(10, tabela.search(10));
-        } catch (Exception e) {
-            fail("Exceção não deve ser lançada");
-        }
+        assertEquals(10, tabela.search(10));
     }
 
     @Test(expected = Exception.class)
@@ -47,6 +43,6 @@ public class Teste_TabelaHash {
     public void testPrint() {        
         tabela.insert(10);
         tabela.insert(15);
-        assertEquals("0: 10\n1: 15\n2: \n3: \n4: \n", tabela.print());
+        assertEquals("0: 15, 10\n1: \n2: \n3: \n4: \n", tabela.print());
     }
 }

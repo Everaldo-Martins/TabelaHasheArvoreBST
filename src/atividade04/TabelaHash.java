@@ -16,9 +16,9 @@ public class TabelaHash implements TabelaHash_IF {
 		}
 	}
 
-  private int hash(int element) {
-    return element % size;
-  }
+	private int hash(int element) {
+		return element % size;
+	}
 
 	@Override
 	public void insert(int element) {
