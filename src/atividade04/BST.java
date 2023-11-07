@@ -16,6 +16,17 @@ public class BST implements BST_IF {
     public BST() {
 		root = null;
 	}
+    
+    private int getSize() {
+		return getSizeAux(root);
+	}
+
+	private int getSizeAux(Node root) {
+		if (root == null) {
+			return 0;
+		}
+		return 1 + getSizeAux(root.left) + getSizeAux(root.right);
+	}
 
 	@Override
 	public void insert(int element) {
@@ -121,16 +132,5 @@ public class BST implements BST_IF {
             return (isCompleteAux(root.left) && isCompleteAux(root.right));
         }  
         return false;
-    }
-
-    private int getSize() {
-		return getSizeAux(root);
-	}
-
-	private int getSizeAux(Node root) {
-		if (root == null) {
-			return 0;
-		}
-		return 1 + getSizeAux(root.left) + getSizeAux(root.right);
-	}
+    }    
 }

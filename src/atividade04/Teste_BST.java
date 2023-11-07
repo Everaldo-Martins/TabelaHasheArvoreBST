@@ -79,6 +79,9 @@ public class Teste_BST {
         bst.insert(12);       
         bst.insert(14);
         bst.insert(15);
+        //Incomplete
+        assertFalse(bst.isComplete());
+        
         bst.insert(4);
         bst.insert(2);
         bst.insert(1);
@@ -90,15 +93,7 @@ public class Teste_BST {
         bst.insert(9);
         bst.insert(5);
         bst.insert(11);
-
+        //Complete
         assertTrue(bst.isComplete());
-
-        BST incompleteBST = new BST();
-        incompleteBST.insert(1);
-        incompleteBST.insert(2);
-        incompleteBST.insert(3);
-        incompleteBST.insert(4);
-
-        assertFalse(incompleteBST.isComplete());
     }
 }
