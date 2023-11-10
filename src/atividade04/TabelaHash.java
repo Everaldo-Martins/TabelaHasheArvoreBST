@@ -21,13 +21,13 @@ public class TabelaHash implements TabelaHash_IF {
 	}
 
 	@Override
-	public void insert(int element) {
+	public void insert(Integer element) {
 		int index = hash(element);
 		frame.get(index).add(0,element);
 	}
 
 	@Override
-	public void remove(int element) throws Exception {
+	public void remove(Integer element) throws Exception {
 		int index = hash(element);
 		List<Integer> list = frame.get(index);
 
@@ -39,7 +39,7 @@ public class TabelaHash implements TabelaHash_IF {
 	}
 
 	@Override
-	public int search(int element) throws Exception {
+	public int search(Integer element) throws Exception {
 		int index = hash(element);
 		List<Integer> list = frame.get(index);
 

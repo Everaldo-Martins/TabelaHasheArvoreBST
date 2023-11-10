@@ -1,13 +1,13 @@
 package atividade04;
 
 /*
- * Interface para implementação da classe "TabelaHash", a qual deve
- * ser implementada usando endereçamento fechado e o método da divisão.
+ * Interface para implementaï¿½ï¿½o da classe "TabelaHash", a qual deve
+ * ser implementada usando endereï¿½amento fechado e o mï¿½todo da divisï¿½o.
  */
 public interface TabelaHash_IF {
-	public void insert(int element);
-	public void remove(int element) throws Exception; //lançar exceção caso o element não esteja na tabela
-	public int search(int element) throws Exception; //lançar exceção caso o element não esteja na tabela
+	public void insert(Integer element);
+	public void remove(Integer element) throws Exception; //lanï¿½ar exceï¿½ï¿½o caso o element nï¿½o esteja na tabela
+	public int search(Integer element) throws Exception; //lanï¿½ar exceï¿½ï¿½o caso o element nï¿½o esteja na tabela
 	public String print();
 	
 	/*

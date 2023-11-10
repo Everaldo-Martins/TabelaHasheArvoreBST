@@ -29,7 +29,7 @@ public class BST implements BST_IF {
 	}
 
 	@Override
-	public void insert(int element) {
+	public void insert(Integer element) {
 		root = insertAux(root, element);
 	}
 
@@ -49,7 +49,7 @@ public class BST implements BST_IF {
 	}
 
 	@Override
-	public int search(int element) throws Exception {
+	public int search(Integer element) throws Exception {
 		return searchAux(root, element);
 	}
 
