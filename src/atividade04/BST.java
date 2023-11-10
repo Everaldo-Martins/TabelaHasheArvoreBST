@@ -1,7 +1,7 @@
 package atividade04;
 
 public class BST implements BST_IF {
-    class Node{
+    private class Node{
         int key;
         Node left, right;
     
