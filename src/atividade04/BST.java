@@ -49,11 +49,7 @@ public class BST implements BST_IF {
 	}
 
 	@Override
-<<<<<<< HEAD
 	public Integer search(Integer element) throws Exception {
-=======
-	public int search(Integer element) throws Exception {
->>>>>>> 7a26361589734c9be39d51faef62b957f1506403
 		return searchAux(root, element);
 	}
 
