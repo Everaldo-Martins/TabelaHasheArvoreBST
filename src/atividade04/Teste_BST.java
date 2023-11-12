@@ -22,13 +22,13 @@ public class Teste_BST {
         bst.insert(6);
         bst.insert(8);
 
-        assertEquals(5, bst.search(5));
-        assertEquals(3, bst.search(3));
-        assertEquals(7, bst.search(7));
-        assertEquals(2, bst.search(2));
-        assertEquals(4, bst.search(4));
-        assertEquals(6, bst.search(6));
-        assertEquals(8, bst.search(8));
+        assertEquals(Integer.valueOf(5), bst.search(Integer.valueOf(5)));
+        assertEquals(Integer.valueOf(3), bst.search(Integer.valueOf(3)));
+        assertEquals(Integer.valueOf(7), bst.search(Integer.valueOf(7)));
+        assertEquals(Integer.valueOf(2), bst.search(Integer.valueOf(2)));
+        assertEquals(Integer.valueOf(4), bst.search(Integer.valueOf(4)));
+        assertEquals(Integer.valueOf(6), bst.search(Integer.valueOf(6)));
+        assertEquals(Integer.valueOf(8), bst.search(Integer.valueOf(8)));
     }
 
     @Test
