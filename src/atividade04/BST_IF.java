@@ -1,11 +1,11 @@
 package atividade04;
 
 /*
- * Interface para implementaÁ„o da classe "BST".
+ * Interface para implementa√ß√£o da classe "BST".
  */
 public interface BST_IF {
-	public void insert(int element);
-	public int search(int element) throws Exception; //lanÁar exceÁ„o caso n„o encontre
+	public void insert(Integer element);
+	public Integer search(Integer element) throws Exception; //lan√ßar exce√ß√£o caso n√£o encontre
 	public int[] preOrder();
 	public int[] order();
 	public int[] postOrder();
