@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * 
- */
-module TabelaHasheArvoreBST {
-	requires junit;
-}
