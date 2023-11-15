@@ -62,7 +62,7 @@ public class Main {
         // Busca por valores
         System.out.println("Valor para chave 10: " + arvorePV.get(5));
         System.out.println("Valor para chave 5: " + arvorePV.get(10));
-        System.out.println("Valor para chave: " + arvorePV.get(15));
-        System.out.println("Valor para chave: " + arvorePV.get(7));
+        System.out.println("Valor para chave 15: " + arvorePV.get(15));
+        System.out.println("Valor para chave 7: " + arvorePV.get(7));
     }
 }
