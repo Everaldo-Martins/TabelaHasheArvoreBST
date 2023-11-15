@@ -1,12 +1,10 @@
 package atividade04;
-import atividade04.ArvorePV;
-import org.w3c.dom.Node;
 
 public class Main {
     public static void main(String[] args) {
         ArvorePV<Integer, String> arvorePV = new ArvorePV<>();
 
-        // Inserção de alguns elementos na árvore
+        // Inserção de elementos na árvore
         arvorePV.put(10, "Valor 5");
         arvorePV.put(5, "Valor 10");
         arvorePV.put(15, "Valor 30");

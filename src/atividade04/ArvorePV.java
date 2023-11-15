@@ -45,10 +45,10 @@ public class ArvorePV<Key extends Comparable<Key>, Value> {
         }
 
         if (isRed(h.right) && !isRed(h.left)) {
-            h = rotateLeft(h);
+            h = rotacaoLeft(h);
         }
         if (isRed(h.left) && isRed(h.left.left)) {
-            h = rotateRight(h);
+            h = rotacaoRight(h);
         }
         if (isRed(h.left) && isRed(h.right)) {
             flipColors(h);
@@ -59,7 +59,7 @@ public class ArvorePV<Key extends Comparable<Key>, Value> {
         return h;
     }
 
-    private No rotateLeft(No h) {
+    private No rotacaoLeft(No h) {
         No x = h.right;
         h.right = x.left;
         x.left = h;
@@ -70,7 +70,7 @@ public class ArvorePV<Key extends Comparable<Key>, Value> {
         return x;
     }
 
-    private No rotateRight(No h) {
+    private No rotacaoRight(No h) {
         No x = h.left;
         h.left = x.right;
         x.right = h;
@@ -96,6 +96,7 @@ public class ArvorePV<Key extends Comparable<Key>, Value> {
         if (x == null) return false;
         return x.cor == RED;
     }
+    
     // Método de busca
     public Value get(Key key) {
         return get(raiz, key);
